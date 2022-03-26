@@ -1,0 +1,67 @@
+
+
+/* Contacto */
+
+
+.sub__pags{
+    font-size: 35px;
+    @extend .titulo__desta;
+}
+
+.d-flex{
+    width: 100%;
+
+    & #textoForm{
+        width: 300px;}
+     
+    & .form__label{
+        font-weight: bold;
+        color: $segundoColor;
+        font-size: 15px;} 
+       
+    & .boton__enviar{
+        font-size: 15px;
+        background-image: linear-gradient(160deg, $segundoColor 0%, $cuartoColor 100%);
+        color: $primerColor;} 
+     
+    & .btn-circle.btn-xl{
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        border-radius: 35px;
+        font-size: 24px;
+        line-height: 1.33;}
+  
+    & .btn-circle{
+        width: 30px;
+        height: 30px;
+        padding: 6px 0px;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.42857;}
+
+    & .btn-grad{
+        margin: 15px;
+        font-size: 20px;
+        @extend .btn__style;}
+      
+    & .btn-grad:hover{
+        background-position: right center;
+        color: $primerColor;
+        text-decoration: none;}
+
+}
+     
+.contact__sect{
+    display: flex;
+    justify-content: center;
+    display: block;
+    color: $segundoColor;
+    & p{
+        text-align: center;
+        color: $segundoColor;
+        font-weight: bold;
+        font-size: 20px;}
+}
+  

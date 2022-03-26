@@ -1,0 +1,22 @@
+
+
+
+/* Nosotros */
+
+.clearfix{
+    height: 400px;
+    
+    & .imgNosotros{
+        width: 500px;
+        height: 200px;               
+        padding-right: 10rem;
+        border-radius: 10px;
+    }
+    
+   & p{
+        color: $segundoColor;
+        font-weight: bold;
+        opacity: 80%;
+    }   
+
+}
