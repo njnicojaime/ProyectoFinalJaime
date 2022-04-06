@@ -3,20 +3,50 @@
 
 /* Nosotros */
 
-.clearfix{
-    height: 400px;
-    
-    & .imgNosotros{
-        width: 500px;
-        height: 200px;               
-        padding-right: 10rem;
-        border-radius: 10px;
-    }
-    
-   & p{
-        color: $segundoColor;
-        font-weight: bold;
-        opacity: 80%;
-    }   
+.grilla__nosotros{
+height: 700px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 80px 310px 300px;
+grid-template-areas: "gridTitulo gridTitulo"
+                     "parrafo1 imagen1"
+                     "imagen2 parrafo2";
+justify-items: center;
+align-items: flex-end;
 
+
+    & .card__grid{
+        height: 80%;
+        width: 80%;
+    }
+
+    & .titulo__grid{
+        grid-area: gridTitulo; 
+        height: 100px;
+    }
+
+    & .parrafoGrid1{
+        @include parrafoGrid (parrafo1, 15px , bold, 1rem 1rem 1rem $cuartoColor);
+    } 
+
+    & .imgGrid1{ 
+        grid-area: imagen1;          
+    }
+
+    & .imgGrid2{ 
+        grid-area: imagen2;   
+    }
+
+    & .parrafoGrid2{
+        @include parrafoGrid (parrafo2, 15px , bold, 1rem 1rem 1rem $cuartoColor);
+    }
+
+    & img{
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem 2rem 2rem 2rem;       
+        box-shadow: 1px 1px 20px $tercerColor;
+    }
 }
+
+

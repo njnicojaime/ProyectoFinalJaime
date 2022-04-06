@@ -6,14 +6,25 @@
 .navbar {
   background-color: #16222A;
   background-image: linear-gradient(160deg, #203A43 0%, #3A6073 100%);
-  border-bottom: solid 1px #adb5bd 0, 0, 0;
-  opacity: 80%; }
-  .navbar a {
-    color: white;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px; }
+  border-bottom: solid 1px #adb5bd 0, 0, 0; }
+  .navbar .navbar-brand {
+    height: 100px; }
+    .navbar .navbar-brand a {
+      color: white;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px; }
+  .navbar #navbarNav a {
+    color: white; }
+  .navbar #navbarNav a:hover {
+    color: #16222A; }
+  .navbar #navbarNav ul {
+    margin: 1rem 1rem 0rem;
+    padding: 1rem 0 0; }
+  .navbar #navbarNav li {
+    margin: 0 10px; }
 
+/*MIXINS */
 /* Carousel */
 .titulo__slide {
   display: flex;
@@ -33,15 +44,17 @@
   color: #203A43;
   background-color: #adb5bd; }
 
+.carousel-control-prev {
+  background: rgba(255, 255, 255, 0.541); }
+
+.carousel-control-next {
+  background: rgba(255, 255, 255, 0.541); }
+
 /* Propiedades destacadas / Alquiler /Venta */
 .row {
-  margin-top: 3rem;
-  padding-left: 12rem; }
-  .row .card-img-top {
-    transition: all 1s; }
-  .row .card-img-top:hover {
-    width: 300px; }
-  .row .card__title {
+  margin: 3rem;
+  padding: 0 0 0 5rem 5rem; }
+  .row .card-title {
     font-weight: bold;
     color: #203A43;
     font-size: 25px;
@@ -54,58 +67,149 @@
     margin-bottom: 0%;
     margin-top: 0%;
     border-radius: 20px; }
-  .row .card__text {
+  .row .card-text {
     font-weight: bold;
     text-align: center;
     font-size: 17px;
-    color: #16222A; }
+    color: #16222A;
+    display: block;
+    -webkit-text-stroke: 0.5px #16222A; }
+
+.card .card__img {
+  transition: all 500ms ease-out; }
+
+.card .capa__card {
+  position: absolute;
+  transition: all 500ms ease-out;
+  top: 0%;
+  opacity: 0;
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  text-align: center; }
+
+.card figure:hover > .capa__card {
+  opacity: 100%;
+  visibility: visible; }
+
+.card figure:hover > .capa__card h3 {
+  margin-top: 50px;
+  margin-bottom: 15px; }
+
+.card .capa__card h3 {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #16222A;
+  text-shadow: 1px 1px;
+  -webkit-text-stroke: 1.3px white; }
+
+.card .capa__card p {
+  color: #16222A;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.521);
+  -webkit-text-stroke: 0.5px #16222A; }
 
 /* Contactanos Index */
-.sub__pags {
-  font-size: 40px; }
-
-.d-flex {
-  width: 100%; }
-  .d-flex #textoForm {
-    width: 300px; }
-  .d-flex .form__label {
+.conte__form {
+  display: flex;
+  justify-content: center;
+  padding-left: 0rem; }
+  .conte__form .estilo__form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(110, 107, 107, 0.205);
+    border-radius: 20px;
+    padding: 30px;
+    width: 70%;
+    height: 50%; }
+  .conte__form.sub__pags {
+    font-size: 40px; }
+  .conte__form #textoForm {
+    font-weight: bold; }
+  .conte__form .form-label {
     font-weight: bold;
     color: #203A43;
     font-size: 15px; }
-  .d-flex .boton__enviar {
+  .conte__form .btn__enviar {
     font-size: 15px;
+    font-weight: bold;
     background-image: linear-gradient(160deg, #203A43 0%, #3A6073 100%);
-    color: white; }
+    color: white;
+    padding: 6px;
+    border-radius: 0.5rem;
+    width: 150px;
+    transition: 0.5s;
+    background-size: 200% auto; }
+  .conte__form .btn__enviar:hover {
+    font-weight: bold;
+    background-image: none;
+    color: #3A6073;
+    text-decoration: none; }
 
 /* Nosotros */
-.clearfix {
-  height: 400px; }
-  .clearfix .imgNosotros {
-    width: 500px;
-    height: 200px;
-    padding-right: 10rem;
-    border-radius: 10px; }
-  .clearfix p {
-    color: #203A43;
+.grilla__nosotros {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px 310px 300px;
+  grid-template-areas: "gridTitulo gridTitulo" "parrafo1 imagen1" "imagen2 parrafo2";
+  justify-items: center;
+  align-items: flex-end; }
+  .grilla__nosotros .card__grid {
+    height: 80%;
+    width: 80%; }
+  .grilla__nosotros .titulo__grid {
+    grid-area: gridTitulo;
+    height: 100px; }
+  .grilla__nosotros .parrafoGrid1 {
+    grid-area: parrafo1;
+    font-size: 15px;
     font-weight: bold;
-    opacity: 80%; }
+    text-shadow: 1rem 1rem 1rem #3A6073; }
+  .grilla__nosotros .imgGrid1 {
+    grid-area: imagen1; }
+  .grilla__nosotros .imgGrid2 {
+    grid-area: imagen2; }
+  .grilla__nosotros .parrafoGrid2 {
+    grid-area: parrafo2;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1rem 1rem 1rem #3A6073; }
+  .grilla__nosotros img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem 2rem 2rem 2rem;
+    box-shadow: 1px 1px 20px #16222A; }
 
 /* Contacto */
 .sub__pags {
   font-size: 35px; }
 
-.d-flex {
+.ubi__contacto {
+  width: 100%;
+  height: 500px; }
+
+.container-fluid {
+  margin-bottom: 2rem;
   width: 100%; }
-  .d-flex #textoForm {
+  .container-fluid #textoForm {
     width: 300px; }
-  .d-flex .form__label {
+  .container-fluid .form__label {
     font-weight: bold;
     color: #203A43;
     font-size: 15px; }
-  .d-flex .boton__enviar {
+  .container-fluid .boton__enviar {
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-size: 15px;
+    font-weight: bold;
     background-image: linear-gradient(160deg, #203A43 0%, #3A6073 100%);
     color: white; }
+
+.d-flex {
+  margin-bottom: 1rem;
+  width: 100%; }
   .d-flex .btn-circle.btn-xl {
     width: 70px;
     height: 70px;
@@ -116,7 +220,7 @@
   .d-flex .btn-circle {
     width: 30px;
     height: 30px;
-    padding: 6px 0px;
+    padding: 0px 0px;
     border-radius: 15px;
     text-align: center;
     font-size: 12px;
@@ -140,12 +244,22 @@
     font-weight: bold;
     font-size: 20px; }
 
+.card {
+  box-shadow: 0 0 20px;
+  overflow: hidden;
+  border-radius: 15px; }
+  .card .cards {
+    margin-bottom: 3rem; }
+  .card figure:hover > .capa__card .p__card {
+    margin-top: 5rem;
+    margin-bottom: 2px; }
+
 * {
   margin: 0%;
-  padding: 0%;
-  box-sizing: border-box; }
+  padding: 0%; }
 
 body {
+  font-weight: bold;
   font-family: 'Poppins', sans-serif;
   background-image: linear-gradient(174.2deg, #fff4e4 7.1%, #f0f6ee 67.4%);
   background-color: #adb5bd; }
@@ -164,27 +278,91 @@ body {
   display: block; }
 
 /* Estilo Titulos */
-.titulos__style, .titulo__desta, .sub__pags {
+.titulos__style, .titulo__desta, .conte__form.sub__pags, .sub__pags {
   text-align: center;
   color: #203A43;
   margin-top: 3rem;
   font-weight: bold;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  text-shadow: 1rem 1rem 1rem #3A6073; }
 
 /* Footer */
-.footer {
+.footer__pags {
+  display: flex;
+  justify-content: space-around;
   background-color: #3A6073;
-  background-image: linear-gradient(160deg, #203A43 0%, #3A6073 100%);
-  height: 120px;
+  background-image: linear-gradient(160deg, #203A43, 0%, #3A6073 100%);
+  height: 150px;
   border-top: solid 1px #16222A;
-  margin-top: 6rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-top: 3rem;
   margin-bottom: 0%;
-  color: white;
-  opacity: 80%; }
-  .footer .powered {
+  color: white; }
+  .footer__pags .footer__titulos {
+    color: white;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-align: center; }
+  .footer__pags .footer__titulos:hover {
+    color: #16222A; }
+  .footer__pags .footer__parrafos {
     color: white;
     opacity: 80%;
-    font-weight: bold;
+    font-weight: none;
     text-align: center;
-    font-size: 20px;
-    margin-bottom: 3rem; }
+    font-size: 15px;
+    margin: 0%;
+    padding: 0%; }
+  .footer__pags .powered {
+    margin-top: 2rem; }
+  .footer__pags .footer__iconos {
+    margin-top: 3rem;
+    font-size: 35px;
+    padding: 1rem;
+    opacity: 80%; }
+  .footer__pags .oficinas {
+    display: block;
+    height: 50%; }
+  .footer__pags .bi-instagram {
+    transition: all; }
+  .footer__pags .bi-facebook {
+    transition: all; }
+  .footer__pags .bi-facebook:hover {
+    color: #0505be; }
+  .footer__pags .bi-instagram:hover {
+    color: #e64761; }
+  .footer__pags a {
+    color: white; }
+
+@media screen and (max-width: 768px) {
+  /* Carousel */
+  .titulo__slide {
+    display: flex;
+    justify-content: center;
+    font-size: 27px;
+    font-family: "Poppins";
+    font-weight: bold;
+    color: #adb5bd;
+    background-color: #3A6073; }
+  .parrafo__slide {
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    font-family: "Poppins";
+    font-weight: bold;
+    color: #203A43;
+    background-color: #adb5bd; }
+  /* Contactanos */
+  .estilo__form {
+    width: 80%; }
+  /* Footer */
+  .footer__pags {
+    height: 200px; } }
+
+@media screen and (min-width: 1000px) {
+  .card .capa__card p {
+    color: #16222A;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.521);
+    -webkit-text-stroke: 0.5px #16222A; } }
