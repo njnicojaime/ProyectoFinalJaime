@@ -54,26 +54,29 @@
 .row {
   margin: 3rem;
   padding: 0 0 0 5rem 5rem; }
-  .row .card-title {
-    font-weight: bold;
-    color: #203A43;
-    font-size: 25px;
-    text-align: center; }
-  .row .btn-grad:hover {
-    background-position: right center;
-    color: white;
-    text-decoration: none; }
   .row .card {
     margin-bottom: 0%;
     margin-top: 0%;
     border-radius: 20px; }
-  .row .card-text {
-    font-weight: bold;
-    text-align: center;
-    font-size: 17px;
-    color: #16222A;
-    display: block;
-    -webkit-text-stroke: 0.5px #16222A; }
+
+.card .card-title {
+  font-weight: bold;
+  color: #203A43;
+  font-size: 25px;
+  text-align: center; }
+
+.card .card-text {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+  color: #16222A;
+  display: block;
+  -webkit-text-stroke: 0.5px #16222A; }
+
+.card .btn-grad:hover {
+  background-position: right center;
+  color: white;
+  text-decoration: none; }
 
 .card .card__img {
   transition: all 500ms ease-out; }
@@ -232,6 +235,8 @@
     background-position: right center;
     color: white;
     text-decoration: none; }
+  .d-flex a {
+    color: white; }
 
 .contact__sect {
   display: flex;
@@ -248,8 +253,6 @@
   box-shadow: 0 0 20px;
   overflow: hidden;
   border-radius: 15px; }
-  .card .cards {
-    margin-bottom: 3rem; }
   .card figure:hover > .capa__card .p__card {
     margin-top: 5rem;
     margin-bottom: 2px; }
@@ -263,9 +266,27 @@ body {
   font-family: 'Poppins', sans-serif;
   background-image: linear-gradient(174.2deg, #fff4e4 7.1%, #f0f6ee 67.4%);
   background-color: #adb5bd; }
+  body .bi-whatsapp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+    background-color: #3dc43d;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100; }
+  body .bi-whatsapp:hover {
+    text-decoration: none;
+    background-color: white;
+    color: #3dc43d; }
 
 /* Estilo boton */
-.btn__style, .row .btn-grad, .d-flex .btn-grad {
+.btn__style, .card .btn-grad, .d-flex .btn-grad {
   background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
   margin: 10px;
   text-align: center;
@@ -361,8 +382,11 @@ body {
     height: 200px; } }
 
 @media screen and (min-width: 1000px) {
+  /* Cards Alquiler/Venta */
   .card .capa__card p {
     color: #16222A;
-    font-size: 15px;
+    font-size: 14px;
     background-color: rgba(255, 255, 255, 0.521);
-    -webkit-text-stroke: 0.5px #16222A; } }
+    -webkit-text-stroke: 0.5px #16222A; }
+  .card .card-title {
+    font-size: 22px; } }

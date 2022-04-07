@@ -12,8 +12,7 @@
 
 *{
     margin: 0%;
-    padding: 0%;
-    
+    padding: 0%;   
 }
 
 body{
@@ -21,6 +20,31 @@ body{
     font-family: 'Poppins', sans-serif;
     background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
     background-color: $quintoColor;
+
+    
+
+    & .bi-whatsapp{
+        position: fixed;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        bottom: 30px;
+        right: 30px;
+        color: $primerColor;
+        background-color: rgb(61, 196, 61);
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+        z-index: 100;
+    }    
+    
+    & .bi-whatsapp:hover{
+        text-decoration: none;
+        background-color: $primerColor;
+        color: rgb(61, 196, 61);
+    }    
+               
 }
    
 
@@ -138,18 +162,26 @@ body{
     .footer__pags{    
     height: 200px;
     }           
-
-
 }
+
+
 @media screen and (min-width:1000px){
  
+
+     /* Cards Alquiler/Venta */
+
 .card{
 
-    .capa__card p{      
+    & .capa__card p{      
         color: $tercerColor;
-        font-size: 15px;
+        font-size: 14px;
         background-color: rgba(255, 255, 255, 0.521);
         -webkit-text-stroke: 0.5px $tercerColor;    
     }   
-}
+
+    & .card-title{
+        font-size: 22px;
+
+    }
+ }
 }
