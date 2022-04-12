@@ -249,6 +249,9 @@
     font-weight: bold;
     font-size: 20px; }
 
+.cards {
+  margin-bottom: 1.5rem; }
+
 .card {
   box-shadow: 0 0 20px;
   overflow: hidden;
@@ -379,14 +382,19 @@ body {
     width: 80%; }
   /* Footer */
   .footer__pags {
-    height: 200px; } }
+    height: 200px; }
+  /* Nosotros */
+  .p__grid {
+    font-size: 13px; } }
 
 @media screen and (min-width: 1000px) {
   /* Cards Alquiler/Venta */
-  .card .capa__card p {
-    color: #16222A;
-    font-size: 14px;
-    background-color: rgba(255, 255, 255, 0.521);
-    -webkit-text-stroke: 0.5px #16222A; }
-  .card .card-title {
-    font-size: 22px; } }
+  .card {
+    margin: 1rem; }
+    .card .capa__card p {
+      color: #16222A;
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, 0.521);
+      -webkit-text-stroke: 0.5px #16222A; }
+    .card .card-title {
+      font-size: 22px; } }

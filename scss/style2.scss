@@ -99,7 +99,8 @@ body{
     }
 
     & .footer__titulos:hover{
-        color: $tercerColor;}   
+        color: $tercerColor;
+    }   
 
    & .footer__parrafos{         
         color: $primerColor;
@@ -108,7 +109,8 @@ body{
         text-align: center;
         font-size: 15px;
         margin: 0%;
-        padding: 0%;}  
+        padding: 0%;
+    }  
         
     & .powered{
         margin-top: 2rem;
@@ -119,23 +121,29 @@ body{
         margin-top: 3rem;
         font-size: 35px;        
         padding: 1rem;
-        opacity: 80%;}
+        opacity: 80%;
+    }
 
     & .oficinas{
         display: block;
-        height: 50%;}
+        height: 50%;
+    }
 
     & .bi-instagram{
-        transition: all;}
+        transition: all;
+    }
 
     & .bi-facebook{
-        transition: all; }
+        transition: all; 
+    }
 
     & .bi-facebook:hover{
-        color: rgb(5, 5, 190)}
+        color: rgb(5, 5, 190)
+    }
 
     & .bi-instagram:hover{
-        color: rgb(230, 71, 97)}  
+        color: rgb(230, 71, 97)
+    }  
     
     & a{
         color: $primerColor;
@@ -143,26 +151,39 @@ body{
 }
 
 
+
+
 @media screen and (max-width:768px){  
     
     /* Carousel */
+
     .titulo__slide{
-        @include carouselText(flex, center , 27px , 'Poppins', bold , $quintoColor , $cuartoColor)}
+        @include carouselText(flex, center , 27px , 'Poppins', bold , $quintoColor , $cuartoColor)
+    }
         
      .parrafo__slide{
-         @include carouselText(flex, center , 17px , 'Poppins' , bold , $segundoColor , $quintoColor)}
+         @include carouselText(flex, center , 17px , 'Poppins' , bold , $segundoColor , $quintoColor)
+        }
     
     /* Contactanos */
 
-     .estilo__form{ 
-        width: 80%;}
+    .estilo__form{ 
+    width: 80%;}
 
     /* Footer */
 
     .footer__pags{    
     height: 200px;
-    }           
+    }    
+ 
+    /* Nosotros */
+
+    .p__grid{
+    font-size: 13px;
+    }
+
 }
+
 
 
 @media screen and (min-width:1000px){
@@ -171,6 +192,7 @@ body{
      /* Cards Alquiler/Venta */
 
 .card{
+    margin: 1rem;
 
     & .capa__card p{      
         color: $tercerColor;
